@@ -1,3 +1,3 @@
-# A Simple Pomodoro Timer
+# Simple Pomodoro Timer
 
 This is a simple pomodoro timer built in react
