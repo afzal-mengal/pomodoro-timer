@@ -70,11 +70,11 @@ export default function Timer() {
 
     let buttonClasses = "";
 
-    if (isRunning) {
-        buttonClasses = "flex justify-center pt-5";
+    if ((type === 'focus' && time === 1500) || (type === 'break' && time === 300)) {
+        buttonClasses = "flex justify-center pt-5 ml-10";
     }
     else {
-        buttonClasses = "flex justify-center pt-5 ml-10";
+        buttonClasses = "flex justify-center pt-5";
     }
 
     return (
@@ -85,7 +85,7 @@ export default function Timer() {
                     <h1 className="text-9xl">{formatTime(time)}</h1>
                 </div>
                 <div className={buttonClasses}>
-                    {isRunning && <button onClick={onHandleClickReset} className="mr-5 text-3xl">⟲</button>}
+                    {!((type === 'focus' && time === 1500) || (type === 'break' && time === 300)) && <button onClick={onHandleClickReset} className="mr-5 text-3xl">⟲</button>}
                     <button onClick={onHandleClickStartStop} className="bg-blue-700 text-white border-b-8 border-b-blue-700 rounded-lg text-3xl w-56">
                         <div className={buttonStyles}>{isRunning ? 'Pause' : 'Start'}</div></button>
                     <button onClick={onHandleClickNext} className="ml-5 text-2xl">⇥</button>
