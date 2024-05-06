@@ -1,5 +1,13 @@
-export default function DarkModeToggle({ darkmode, onToggleDarkMode }) {
+import { DarkModeSwitch } from "react-toggle-dark-mode";
+
+export default function DarkModeToggle({ darkMode, onToggleDarkMode }) {
+
+    const isDark = darkMode === "dark" ? true : false
+
     return (
-        <button onClick={onToggleDarkMode} className="dark:text-white">darkmode</button>
-    )
+        <DarkModeSwitch style={{ margin: '1rem' }}
+            checked={isDark}
+            onChange={onToggleDarkMode}
+            size={35}></DarkModeSwitch>
+    );
 }

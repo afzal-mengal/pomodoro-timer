@@ -20,7 +20,7 @@ export default function App() {
 
   return (
     <>
-      <div className={`flex items-center justify-center min-h-screen bg-slate-100 dark:bg-black ${isDark}`}>
+      <div className={`flex items-center justify-center min-h-screen bg-slate-100 dark:bg-black ${isDark} transition duration-1000 ease-in-out`}>
         <div className="absolute top-0 left-0">
           <DarkModeToggle darkMode={isDark} onToggleDarkMode={handleToggle}></DarkModeToggle>
         </div>

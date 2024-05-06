@@ -52,20 +52,21 @@ export default function Timer() {
         setIsRunning(false);
         if (type === 'focus') {
             setType('break');
-            setTime(5);
+            setTime(300);
         }
         else {
             setType('focus');
-            setTime(25);
+            setTime(1500);
         }
     }
 
     let buttonStyles = "";
+
     if (!isRunning) {
-        buttonStyles = "px-8 py-4 duration-150 bg-indigo-500 rounded-lg"
+        buttonStyles = "px-8 py-4 duration-500 bg-indigo-500 rounded-lg";
     }
     else {
-        buttonStyles = "px-8 py-4 duration-150 bg-indigo-700 rounded-lg"
+        buttonStyles = "px-8 py-4 duration-500 bg-indigo-700 rounded-lg";
     }
 
     let buttonClasses = "";
@@ -78,7 +79,7 @@ export default function Timer() {
     }
 
     return (
-        <div className="flex flex-col p-6 m-3 space-y-10 bg-white dark:bg-slate-600 dark:text-white rounded-2xl shadow-2xl w-96">
+        <div className="flex flex-col p-6 m-3 space-y-10 bg-white dark:bg-slate-600 dark:text-white rounded-2xl shadow-2xl w-96 transition duration-300 ease-in-out">
             <div>
                 <div className="flex flex-col items-center justify-center">
                     <h2 className="text-3xl">{type[0].toUpperCase() + type.slice(1)}</h2>
