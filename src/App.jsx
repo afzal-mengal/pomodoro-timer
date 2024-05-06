@@ -5,17 +5,22 @@ import DarkModeToggle from "./components/DarkModeToggle"
 
 export default function App() {
 
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState('');
 
   function handleToggle() {
-    setIsDark(!isDark);
+    setIsDark((prevState) => {
+      if (prevState === 'dark') {
+        return '';
+      }
+      else if (prevState === '') {
+        return 'dark';
+      }
+    });
   }
-
-  console.log(isDark);
 
   return (
     <>
-      <div className="flex items-center justify-center min-h-screen bg-slate-100">
+      <div className={`flex items-center justify-center min-h-screen bg-slate-100 dark:bg-black ${isDark}`}>
         <div className="absolute top-0 left-0">
           <DarkModeToggle darkMode={isDark} onToggleDarkMode={handleToggle}></DarkModeToggle>
         </div>

@@ -1,7 +1,5 @@
-import { useState } from "react"
-
 export default function DarkModeToggle({ darkmode, onToggleDarkMode }) {
     return (
-        <button onClick={onToggleDarkMode}>darkmode</button>
+        <button onClick={onToggleDarkMode} className="dark:text-white">darkmode</button>
     )
 }

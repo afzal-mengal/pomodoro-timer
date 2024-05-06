@@ -62,10 +62,10 @@ export default function Timer() {
 
     let buttonStyles = "";
     if (!isRunning) {
-        buttonStyles = "px-8 py-4 duration-150 bg-blue-500 rounded-lg"
+        buttonStyles = "px-8 py-4 duration-150 bg-indigo-500 rounded-lg"
     }
     else {
-        buttonStyles = "px-8 py-4 duration-150 bg-blue-700 rounded-lg"
+        buttonStyles = "px-8 py-4 duration-150 bg-indigo-700 rounded-lg"
     }
 
     let buttonClasses = "";
@@ -78,7 +78,7 @@ export default function Timer() {
     }
 
     return (
-        <div className="flex flex-col p-6 m-3 space-y-10 bg-white rounded-2xl shadow-2xl w-96">
+        <div className="flex flex-col p-6 m-3 space-y-10 bg-white dark:bg-slate-600 dark:text-white rounded-2xl shadow-2xl w-96">
             <div>
                 <div className="flex flex-col items-center justify-center">
                     <h2 className="text-3xl">{type[0].toUpperCase() + type.slice(1)}</h2>
@@ -86,7 +86,7 @@ export default function Timer() {
                 </div>
                 <div className={buttonClasses}>
                     {!((type === 'focus' && time === 1500) || (type === 'break' && time === 300)) && <button onClick={onHandleClickReset} className="mr-5 text-3xl">⟲</button>}
-                    <button onClick={onHandleClickStartStop} className="bg-blue-700 text-white border-b-8 border-b-blue-700 rounded-lg text-3xl w-56">
+                    <button onClick={onHandleClickStartStop} className="text-white border-b-8 bg-indigo-700 border-b-indigo-700 rounded-lg text-3xl w-56">
                         <div className={buttonStyles}>{isRunning ? 'Pause' : 'Start'}</div></button>
                     <button onClick={onHandleClickNext} className="ml-5 text-2xl">⇥</button>
                 </div>
