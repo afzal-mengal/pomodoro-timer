@@ -2,5 +2,5 @@
 
 This is a simple pomodoro timer built in react
 
-![Light Mode](/screenshots/Light.png?raw=true "light Mode")
-![Dark Mode](/screenshots/Dark.png?raw=true "dark Mode")
+![Light Mode](/screenshots/light.png?raw=true "light Mode")
+![Dark Mode](/screenshots/dark.png?raw=true "dark Mode")
