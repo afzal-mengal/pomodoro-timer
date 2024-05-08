@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export default function Timer() {
 
     const [type, setType] = useState('focus');
-    const [time, setTime] = useState(10);
+    const [time, setTime] = useState(1500);
     const [isRunning, setIsRunning] = useState(false);
 
     useEffect(() => {
@@ -30,21 +30,21 @@ export default function Timer() {
         setIsRunning(false);
         if (type === 'focus') {
             setType('break');
-            setTime(5);
+            setTime(300);
         }
         else {
             setType('focus');
-            setTime(10);
+            setTime(1500);
         }
     }
 
     function onHandleClickReset() {
         setIsRunning(false);
         if (type == 'focus') {
-            setTime(10);
+            setTime(1500);
         }
         else {
-            setTime(5);
+            setTime(300);
         }
     }
 
@@ -54,11 +54,11 @@ export default function Timer() {
         alarm.play();
         if (type === 'focus') {
             setType('break');
-            setTime(5);
+            setTime(300);
         }
         else {
             setType('focus');
-            setTime(10);
+            setTime(1500);
         }
     }
 
