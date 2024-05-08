@@ -25,6 +25,7 @@ export default function App() {
           <DarkModeToggle darkMode={isDark} onToggleDarkMode={handleToggle}></DarkModeToggle>
         </div>
         <Timer></Timer>
+        <SpeedInsights />
       </div>
     </>
   )
