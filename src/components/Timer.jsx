@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export default function Timer() {
 
     const [type, setType] = useState('focus');
-    const [time, setTime] = useState(15);
+    const [time, setTime] = useState(1500);
     const [isRunning, setIsRunning] = useState(false);
 
     useEffect(() => {
